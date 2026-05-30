@@ -2,13 +2,25 @@ package org.example.designpatterns.builder;
 
 public class Client {
     public static void main(String[] args) {
-        Helper helper = new Helper();
+        // Verbose
+//        StudentBuilder builder = Student.getBuilder();
+//        builder.setName("Alok");
+//        builder.setAge(28);
+//        builder.setPsp(99.0);
+//        builder.setUniversityName("Thapar University");
+//        builder.setGradYear(2027);
 
-        helper.setName("Alok");
-        helper.setAge(28);
-        helper.setPsp(99.0);
-        helper.setUniversityName("Thapar University");
+//        Student student = builder.build(); // builder builds the Student object
 
-        Student st = new Student(helper); // validations will happen inside this
+        // Fluent way
+        Student student = Student.getBuilder()
+                .setName("Alok")
+                .setAge(28)
+                .setPsp(92)
+                .setId(12)
+                .setGradYear(2019)
+                .build();
+        System.out.println("Student created successfully");
+
     }
 }

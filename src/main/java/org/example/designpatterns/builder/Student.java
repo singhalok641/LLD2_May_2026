@@ -1,7 +1,5 @@
 package org.example.designpatterns.builder;
 
-import java.util.Map;
-
 public class Student {
     private String name;
     private int age;
@@ -11,21 +9,118 @@ public class Student {
     private long id;
     private int gradYear;
     private String phoneNumber;
-    Student(Helper helper) {
-        // validations here
-        if (helper.getGradYear() > 2026) {
-            throw new IllegalArgumentException("Grad year cannot be > 2026");
+
+    public static StudentBuilder getBuilder() {
+        return new StudentBuilder();
+    }
+    
+    private Student(StudentBuilder builder) {
+        this.name = builder.getName();
+        this.age = builder.getAge();
+        this.batch = builder.getBatch();
+        this.gradYear = builder.getGradYear();
+        this.id = builder.getId();
+        this.universityName = builder.getUniversityName();
+        this.psp = builder.getPsp();
+        this.phoneNumber = builder.getPhoneNumber();
+    }
+
+    // INNER BUILDER CLASS
+
+    static class StudentBuilder {
+        private String name;
+        private int age;
+        private double psp;
+        private String universityName;
+        private String batch;
+        private long id;
+        private int gradYear;
+        private String phoneNumber;
+
+        public String getName() {
+            return name;
         }
 
-        // multiple validations here
+        public StudentBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
 
-        this.name = helper.getName();
-        this.age = helper.getAge();
-        this.batch = helper.getBatch();
-        this.gradYear = helper.getGradYear();
-        this.id = helper.getId();
-        this.universityName = helper.getUniversityName();
-        this.psp = helper.getPsp();
+        public int getAge() {
+            return age;
+        }
+
+        public StudentBuilder setAge(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public double getPsp() {
+            return psp;
+        }
+
+        public StudentBuilder setPsp(double psp) {
+            this.psp = psp;
+            return this;
+        }
+
+        public String getUniversityName() {
+            return universityName;
+        }
+
+        public StudentBuilder setUniversityName(String universityName) {
+            this.universityName = universityName;
+            return this;
+        }
+
+        public String getBatch() {
+            return batch;
+        }
+
+        public StudentBuilder setBatch(String batch) {
+            this.batch = batch;
+            return this;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public StudentBuilder setId(long id) {
+            this.id = id;
+            return this;
+        }
+
+        public int getGradYear() {
+            return gradYear;
+        }
+
+        public StudentBuilder setGradYear(int gradYear) {
+            this.gradYear = gradYear;
+            return this;
+        }
+
+        public String getPhoneNumber() {
+            return phoneNumber;
+        }
+
+        public StudentBuilder setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        public Student build() {
+            validate();
+            return new Student(this);
+        }
+
+        private void validate() {
+            // validations starts
+            if (this.getGradYear() > 2026) {
+                throw new IllegalArgumentException("Grad year cannot be > 2026");
+            }
+            // validations end
+        }
     }
 }
 
