@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f051de5-425e-4326-a2ce-464134767a46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/ChocolateCone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/ChocolateSyrup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/IceCream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/OrangeCone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/StrawberryTopping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/VanillaScoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/v1/Cone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/v1/IceCream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/v1/Topping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/flyweight/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/flyweight/BulletType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/flyweight/BulletTypeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/flyweight/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/flyweight/BulletTypeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/flyweight/BulletTypeFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +146,7 @@
       <updated>1779355057989</updated>
       <workItem from="1779355059079" duration="2953000" />
       <workItem from="1780069590892" duration="34829000" />
-      <workItem from="1780930108988" duration="5834000" />
+      <workItem from="1780930108988" duration="8783000" />
     </task>
     <servers />
   </component>
@@ -173,6 +160,15 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/designpatterns/prototype/Client.java</url>
           <line>93</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/designpatterns/decorator/OrangeCone.java</url>
+          <line>30</line>
+          <properties class="org.example.designpatterns.decorator.OrangeCone" method="getCost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
